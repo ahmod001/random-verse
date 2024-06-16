@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState,} from "react";
 import { Meme } from "../Types/MemeTypes";
-import "../css/download-btn.css"
+import "../css/download-btn.css";
 
 interface Props {
   meme: Meme;
 }
 
 const MemeCard = ({ meme }: Props) => {
+  const [isImgLoading, setIsImgLoading] = useState<boolean>(true);
+
   return (
     <div className="card max-w-96 w-full bg-gray-500/20 backdrop-blur-sm mx-auto rounded-md">
       <div className="py-3 px-2 card-body">
@@ -14,11 +16,13 @@ const MemeCard = ({ meme }: Props) => {
           {meme.name}
         </h2>
       </div>
+      {isImgLoading && <div className={"min-h-[20rem] skeleton"}></div>}
       <figure>
         <img
-          className={"h-full md:max-h-" + meme.height}
-          src={meme?.url}
-          alt={meme?.name}
+          className={`h-full max-h-${meme.height}`}
+          src={meme.url}
+          alt={meme.name}
+          onLoad={() => setIsImgLoading(false)}
           loading="lazy"
         />
       </figure>
