@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "../Components/Footer";
 
 
-const MainLayout = () => {
+const MainLayout = ():React.ReactNode => {
   return (
     <main>
       <Navbar />

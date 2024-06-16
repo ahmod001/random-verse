@@ -4,7 +4,7 @@ import axios from "axios";
 import MemeCard from "../Components/MemeCard";
 import Loader from "../Components/Loader";
 
-const MemesPage = () => {
+const MemesPage = ():React.ReactNode => {
   const [memeList, setMemeList] = useState<Meme[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 

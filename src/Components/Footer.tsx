@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ():React.ReactNode => {
   return (
     <footer className="footer p-4 bg-[#191a1a] text-neutral-content">
       <p className="mx-auto">

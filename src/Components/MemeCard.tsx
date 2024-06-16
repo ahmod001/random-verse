@@ -6,7 +6,7 @@ interface Props {
   meme: Meme;
 }
 
-const MemeCard = ({ meme }: Props) => {
+const MemeCard = ({ meme }: Props):React.ReactNode => {
   const [isImgLoading, setIsImgLoading] = useState<boolean>(true);
 
   return (

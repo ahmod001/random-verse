@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-const Navbar = () => {
+const Navbar = ():React.ReactNode => {
 
   return (
     <div className="navbar bg-[#191a1a] bg-opacity-70 backdrop-blur-md sticky top-0 z-[999]">
