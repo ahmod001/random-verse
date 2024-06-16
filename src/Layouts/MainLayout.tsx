@@ -1,11 +1,15 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
+import { Outlet } from "react-router-dom";
 
-interface Props {
-  children: React.ReactNode;
-}
 
-const MainLayout = ({ children }: Props) => {
-  return <main>{children}</main>;
+const MainLayout = () => {
+  return (
+    <main>
+      <Navbar />
+      <Outlet/>
+    </main>
+  );
 };
 
 export default MainLayout;
