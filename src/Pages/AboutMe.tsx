@@ -1,22 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import AhmodHasan from "../assets/ahmod-hasan.jpg";
 import Techs from "../assets/techs.png";
 import "../css/social-links.css";
 
 const AboutMe = (): React.ReactNode => {
+  const [isImgLoading, setIsImgLoading] = useState<boolean>(true);
+
   return (
     <section className="min-h-screen py-10 px-2 max-w-6xl mx-auto flex justify-center">
       <div className="space-y-7">
-        <img
-          className="rounded-full max-h-52"
-          src={AhmodHasan}
-          alt="Ahmod Hasan"
-        />
+        <div>
+          {isImgLoading && (
+            <div className={"rounded-full min-h-52 skeleton"}></div>
+          )}
+          <img
+            className="rounded-full max-h-52"
+            src={AhmodHasan}
+            alt="Ahmod Hasan"
+            onLoad={() => setIsImgLoading(false)}
+          />
+        </div>
 
         <div className="space-y-1">
-          <h1 className="text-center text-2xl font-semibold">
-            Ahmod Hasan
-          </h1>
+          <h1 className="text-center text-2xl font-semibold">Ahmod Hasan</h1>
           <p className="text-center">Freelance Web Developer</p>
           <img
             className="h-10 mx-auto"
@@ -24,7 +30,7 @@ const AboutMe = (): React.ReactNode => {
             alt="Laravel, Reactjs, Vuejs"
           />
         </div>
-        
+
         <div className="social-card scale-90">
           <a
             href="https://github.com/ahmod001"
@@ -77,7 +83,6 @@ const AboutMe = (): React.ReactNode => {
           </a>
         </div>
       </div>
-      
     </section>
   );
 };
