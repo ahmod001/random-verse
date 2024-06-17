@@ -12,5 +12,10 @@ body {
     background-size: 55px 55px;
 
     scroll-behavior: smooth;
+        
   }
 
+  ::selection {
+    background: #191a1a;
+    color: white; /* Optional: to set the color of the selected text */
+}

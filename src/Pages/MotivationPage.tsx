@@ -1,38 +1,38 @@
 import React, { useEffect, useState } from "react";
-import { Meme, MemeResponse } from "../Types/MemeTypes";
+import { Quote, QuoteResponse } from "../Types/QuoteTypes";
 import axios from "axios";
-import MemeCard from "../Components/MemeCard";
 import Loader from "../Components/Loader";
+import QuoteCard from "../Components/QuoteCard";
 
-const MemesPage = ():React.ReactNode => {
-  const [memeList, setMemeList] = useState<Meme[]>([]);
+const MotivationPage = (): React.ReactNode => {
+  const [quoteList, setQuoteList] = useState<Quote[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  //   Fetch Memes
+  //   Fetch Quotes
   useEffect(() => {
     (async () => {
       setIsLoading(true);
       try {
-        const res = await axios.get("https://api.imgflip.com/get_memes");
-        const data: MemeResponse = res.data;
+        const res = await axios.get(
+          "https://api.quotable.io/quotes?tags=famous-quotes&limit=100"
+        );
+        const data: QuoteResponse = res.data;
 
-        setMemeList(data?.data?.memes);
+        setQuoteList(data?.results);
       } catch (error) {
         console.error(error);
       }
       setIsLoading(!true);
     })();
   }, []);
-
-
   return (
     <>
       {isLoading ? (
         <Loader />
       ) : (
         <section className="space-y-7 py-10 px-2 max-w-6xl mx-auto">
-          {memeList?.map((meme: Meme) => (
-            <MemeCard key={meme.id} meme={meme} />
+          {quoteList.map((quote)=>(
+              <QuoteCard key={quote._id} quote={quote}/>
           ))}
         </section>
       )}
@@ -40,4 +40,4 @@ const MemesPage = ():React.ReactNode => {
   );
 };
 
-export default MemesPage;
+export default MotivationPage;
