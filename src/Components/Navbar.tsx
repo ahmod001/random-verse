@@ -14,7 +14,7 @@ const Navbar = (): React.ReactNode => {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/ahmod-hasan">About me</NavLink>
             </li>
           </ul>
         </div>
