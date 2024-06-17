@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import AhmodHasan from "../assets/ahmod-hasan.jpg";
-import Techs from "../assets/techs.png";
 import "../css/social-links.css";
 
 const AboutMe = (): React.ReactNode => {
@@ -15,7 +13,7 @@ const AboutMe = (): React.ReactNode => {
           )}
           <img
             className="rounded-full max-h-52"
-            src={AhmodHasan}
+            src="/ahmod-hasan.jpg"
             alt="Ahmod Hasan"
             onLoad={() => setIsImgLoading(false)}
           />
@@ -26,7 +24,7 @@ const AboutMe = (): React.ReactNode => {
           <p className="text-center">Freelance Web Developer</p>
           <img
             className="h-10 mx-auto"
-            src={Techs}
+            src="/techs.png"
             alt="Laravel, Reactjs, Vuejs"
           />
         </div>
