@@ -29,7 +29,7 @@ const MemesPage = ():React.ReactNode => {
       {isLoading ? (
         <Loader />
       ) : (
-        <section className="space-y-7 py-10 px-2 max-w-2xl mx-auto">
+        <section className="space-y-7 py-10 px-2 max-w-6xl mx-auto">
           {memeList?.map((meme: Meme) => (
             <MemeCard key={meme.id} meme={meme} />
           ))}
