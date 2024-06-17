@@ -7,7 +7,7 @@ const Navbar = (): React.ReactNode => {
     <div className="  bg-[#191a1a] bg-opacity-70 backdrop-blur-md sticky top-0 z-[999]">
       <div className="px-2 max-w-6xl mx-auto navbar">
         <div className="flex-1">
-          <NavLink to="/" className="shine text-xl font-semibold">
+          <NavLink to="/" className="shine md:text-xl text-lg font-semibold">
           Random Verse
           </NavLink>
         </div>
