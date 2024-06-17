@@ -1,13 +1,19 @@
-import React, { useState,} from "react";
+import React, { useState } from "react";
 import { Meme } from "../Types/MemeTypes";
 import "../css/download-btn.css";
+import { saveAs } from "file-saver";
 
 interface Props {
   meme: Meme;
 }
 
-const MemeCard = ({ meme }: Props):React.ReactNode => {
+const MemeCard = ({ meme }: Props): React.ReactNode => {
   const [isImgLoading, setIsImgLoading] = useState<boolean>(true);
+
+
+  const handleDownload = (): void => {
+    saveAs(meme.url, meme.name + "_Random Verse");
+  };
 
   return (
     <div className="card max-w-96 w-full bg-gray-500/20 backdrop-blur-sm mx-auto rounded-md">
@@ -27,7 +33,7 @@ const MemeCard = ({ meme }: Props):React.ReactNode => {
         />
       </figure>
       <div className="py-2 px-2 flex justify-end">
-        <button className="Btn" title="Download">
+        <button onClick={handleDownload} className="Btn" title="Download">
           <svg
             className="svgIcon"
             viewBox="0 0 384 512"
