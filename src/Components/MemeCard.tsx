@@ -12,7 +12,7 @@ const MemeCard = ({ meme }: Props): React.ReactNode => {
 
 
   const handleDownload = (): void => {
-    saveAs(meme.url, meme.name + "_Random Verse");
+    saveAs(meme.url, meme.name + "_random verse");
   };
 
   return (
