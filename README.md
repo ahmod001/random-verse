@@ -22,6 +22,17 @@ RandomVerse is a lightweight, user-friendly website built with React v18, TypeSc
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/randomverse.git
-
+   git clone https://github.com/ahmod001/random-verse.git
    ```
+2. Run this commands
+   ```bash
+   cd random-verse
+   npm install
+   npm run dev
+    ```
+   ## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+##### ©2024 Developed by Ahmod Hasan
