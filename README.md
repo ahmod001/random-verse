@@ -1,3 +1,5 @@
+![mockup](https://github.com/ahmod001/random-verse/assets/121039395/c5c7b1a2-d612-4f83-b74a-b86cadf00ae1)
+
 # RandomVerse
 
 RandomVerse is a lightweight, user-friendly website built with React v18, TypeScript, Tailwind CSS, Disy UI, and react-router-dom. It provides users with random entertainment content including memes and motivational quotes. The website is designed to be mobile-friendly and offers a seamless experience across devices.
